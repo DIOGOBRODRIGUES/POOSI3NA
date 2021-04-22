@@ -16,15 +16,7 @@ public class RepositorioContas {
 
 //********Método Procurar **********************///
 	public Conta procurar(String num) {
-		int i = 0;
-		boolean achou = false;
-		while((!achou) && (i < this.proxima)) {
-			if(num.equals(String.valueOf(this.contas[i].getNumero()))) {
-				achou = true;
-			}else {
-				i = i + 1 ;
-			}
-		}//fim do while
+		int i = this.procurarIndice(num);
 		Conta resultado = null;
 		if(i != this.proxima) {
 			resultado = this.contas[i];
@@ -34,16 +26,7 @@ public class RepositorioContas {
 
 //************ Método remover *****************//
 	public void remover (String num) {
-		int i = 0;
-		boolean achou = false;
-		while((!achou) && (i < this.proxima)) {
-			if(num.equals(String.valueOf(this.contas[i].getNumero()))) {
-				achou = true;
-			}else {
-				i = i + 1;
-			}
-		}//fim do while
-		
+		int i = this.procurarIndice(num);
 		if(i != this.proxima) {
 			this.contas[i] = this.contas[this.proxima - 1];
 			this.contas[this.proxima - 1] = null;
@@ -54,4 +37,18 @@ public class RepositorioContas {
 		}
 	}
 
+//*******Método auxiliar***************************/	
+	private int procurarIndice(String num) {
+		int i = 0;
+		boolean achou = false;
+		while((!achou) && (i < this.proxima)) {
+			if(num.equals(String.valueOf(this.contas[i].getNumero()))) {
+				achou = true;
+			}else {
+				i = i + 1;
+			}
+		}//fim do while
+		
+		return i;
+	}
 }
