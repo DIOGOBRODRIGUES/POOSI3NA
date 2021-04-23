@@ -1,4 +1,4 @@
-package app;
+package br.uninassau.sistema_bancario.negocios.beans;
 
 public class Conta {
 	private int numero;
