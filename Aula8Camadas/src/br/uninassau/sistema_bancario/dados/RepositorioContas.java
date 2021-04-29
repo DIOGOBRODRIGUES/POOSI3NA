@@ -46,7 +46,7 @@ public class RepositorioContas {
 		int i = 0;
 		boolean achou = false;
 		while((!achou) && (i < this.proxima)) {
-			if(num.equals(String.valueOf(this.contas[i].getNumero()))) {
+			if(num.equals(this.contas[i].getNumero())) {
 				achou = true;
 			}else {
 				i = i + 1;
