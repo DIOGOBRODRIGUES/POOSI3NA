@@ -15,7 +15,7 @@ public class Carro extends VeiculoTerrestre{
 		return this.marca;
 	}
 	
-	public String proprietario() {
+	public String getProprietario() {
 		return this.proprietario;
 	}
 }
