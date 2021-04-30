@@ -2,7 +2,7 @@ package br.uninassau.sistema_bancario.negocios.beans;
 
 public class Conta {
 	private String numero;//1235456-6
-	private double saldo;
+	protected double saldo;
 	
 	
 	public Conta(String numero, double saldo) {

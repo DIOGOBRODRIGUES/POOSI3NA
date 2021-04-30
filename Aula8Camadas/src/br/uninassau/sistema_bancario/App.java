@@ -1,8 +1,7 @@
 package br.uninassau.sistema_bancario;
 
 import br.uninassau.sistema_bancario.dados.*;
-import br.uninassau.sistema_bancario.negocios.beans.Conta;
-import br.uninassau.sistema_bancario.negocios.beans.ContaPoupanca;
+import br.uninassau.sistema_bancario.negocios.beans.*;
 
 public class App {
 	public static void main (String[] args) {
@@ -23,13 +22,19 @@ public class App {
 		listaContas.remover("12345");
 		
 		System.out.println(listaContas.toString());*/
-		
+		/*
 		ContaPoupanca p = new ContaPoupanca("235649-5");
 		p.creditar(150.00);
 		p.debitar(50.0);
 		p.renderJuros(0.1);
 		
-		System.out.println(p.getSaldo());
+		System.out.println(p.getSaldo());*/
+		
+		ContaEspecial contae = new ContaEspecial("45897-5");
+		contae.creditar(500);
+		contae.debitar(550);
+		contae.aumetarLimite(100);
+		System.out.println(contae.getSaldo());
 		
 	}
 }
