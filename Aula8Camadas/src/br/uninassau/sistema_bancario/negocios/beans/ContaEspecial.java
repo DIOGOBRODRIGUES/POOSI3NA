@@ -8,7 +8,7 @@ public class ContaEspecial extends Conta{
 		this.limite = 100.00;
 	}
 	
-	public void aumetarLimite(double aumento) {
+	public void aumentarLimite(double aumento) {
 		this.limite += aumento;
 	}
 	

@@ -29,11 +29,28 @@ public class App {
 		p.renderJuros(0.1);
 		
 		System.out.println(p.getSaldo());*/
-		
+		/*
 		ContaEspecial contae = new ContaEspecial("45897-5");
 		contae.creditar(500);
 		contae.debitar(550);
 		contae.aumetarLimite(100);
+		System.out.println(contae.getSaldo());*/
+		
+		/*
+		Conta conta = new ContaPoupanca("2345-12");
+		conta.creditar(100);
+		conta.debitar(50);
+		
+		System.out.println(conta.getSaldo());
+		*/
+		
+		
+		Conta contae = new ContaEspecial("121466-56");
+		contae.creditar(500.0);
+		
+		contae.debitar(550.0);
+		((ContaEspecial)contae).aumentarLimite(100);
+		
 		System.out.println(contae.getSaldo());
 		
 	}

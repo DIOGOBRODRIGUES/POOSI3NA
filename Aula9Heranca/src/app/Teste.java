@@ -8,6 +8,8 @@ public class Teste {
 		System.out.println(carro.getPreco());//super Classe Veiculo
 		System.out.println(carro.getVelocidadeTerrestre()); //subclasse VeiculoTerrestre
 		System.out.println(carro.getMarca());
+		
+		
 	}
 	
 	
