@@ -35,8 +35,8 @@ public class HourlyEmployee extends Employee{
 	}
 	
 	public String toString() {
-		return String.format("hourly employee: %s\n %s: %.2f %s: %.2f", super.toString(),"hourly wage",
-				this.getWage(), "hours worked", this.getHours());
+		return String.format("hourly employee: %s\n %s: %.2f %s: %.2f", super.toString()
+				,"hourly wage",this.getWage(), "hours worked", this.getHours());
 	}
 	
 }
