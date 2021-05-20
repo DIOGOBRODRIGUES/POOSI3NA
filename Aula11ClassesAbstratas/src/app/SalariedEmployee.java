@@ -8,6 +8,11 @@ public class SalariedEmployee extends Employee{
 		this.setWeeklySalary(salary);
 	}
 	
+	@Override
+	public double getPaymentAmount() {
+		return this.weeklySalary;
+	}
+	
 	public double getWeeklySalary() {
 		return this.weeklySalary;
 	}
@@ -20,6 +25,7 @@ public class SalariedEmployee extends Employee{
 		this.weeklySalary = (salary < 0.0) ? 0.0 : salary;
 	}
 	
+	@Override
 	public double earnings() {
 		return getWeeklySalary();
 	}
